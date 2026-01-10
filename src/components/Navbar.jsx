@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom"
 export default function Navbar() {
   const links = [
     { path: "/", label: "Home" },
+    { path: "/projects", label: "Projects" },
     { path: "/resume", label: "Resume" },
     { path: "/transcript", label: "Transcript" },
     { path: "/contact", label: "Contact" },
+
   ]
 
   return (
