@@ -56,10 +56,10 @@ export default function About() {
           {/* highlights */}
           <div className="grid grid-cols-2 gap-6">
             {[
-              { label: "Frontend Focus", value: "React / UI" },
+              { label: "Frontend Focus", value: "C++ /React /UI /HTML /Tailwind" },
               { label: "Experience", value: "Web & IoT" },
               { label: "Design Style", value: "Minimal & Clean" },
-              { label: "Mindset", value: "Always Learning" },
+              { label: "Mindset", value: "I enjoy learning new things." },
             ].map((item, i) => (
               <div
                 key={i}
@@ -84,18 +84,18 @@ export default function About() {
         >
           {/* glow */}
           <div
-            className="absolute w-72 h-72 rounded-full blur-3xl opacity-40
+            className="absolute w-96 h-96 md:w-[26rem] md:h-[26rem] rounded-full blur-3xl opacity-40
             bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400"
           />
 
           {/* avatar */}
           <div
-            className="relative w-64 h-64 rounded-3xl overflow-hidden
+            className="relative w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden
             border border-white/40 shadow-2xl bg-white
             transition-transform duration-500 hover:scale-105"
           >
             <img
-              src="/github.jpg"
+              src="/TYu.jpg"
               alt="Profile"
               className="w-full h-full object-cover"
             />

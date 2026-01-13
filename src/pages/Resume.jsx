@@ -57,10 +57,11 @@ export default function Resume() {
                 🎓 Education
               </h3>
               <p className="text-gray-700">
-                Bachelor's Degree in Computer / Engineering / IT
-              </p>
-              <p className="text-sm text-gray-500 mt-1">
-                University Name · 2021 – 2025
+                -Chumphon Technical College Computer Technology 2019-2021 <br />
+                -Chumphon Technical College Computer Hardware 2021-2023 <br />
+                -King mongkut's university of technology north bangkok <br /> 
+                 Bachelor's Degree in Electronic computer technology 2024-Present
+                
               </p>
             </motion.div>
 
@@ -78,7 +79,7 @@ export default function Resume() {
 
               <div className="flex flex-wrap gap-3">
                 {[
-                  "React",
+                  "C / C++",
                   "JavaScript",
                   "Tailwind CSS",
                   "HTML / CSS",
