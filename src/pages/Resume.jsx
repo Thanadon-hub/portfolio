@@ -80,17 +80,22 @@ export default function Resume() {
                   "JavaScript",
                   "Tailwind CSS",
                   "HTML / CSS",
-                  "Git & GitHub",
-                  "Basic Backend",
+                  "LAN / Wi-Fi Setup",
+                  "Network Configuration (Basic)",
+                  "Switch Configuration (Layer 2, Layer 3)",
+                  
                 ].map((skill) => (
                   <span
                     key={skill}
                     className="
-                      px-4 py-2 rounded-full
-                      bg-white/70 backdrop-blur
-                      text-sky-700 text-sm font-medium
-                      border border-white/40
-                    "
+    px-4 py-2 rounded-full
+    bg-white/70 backdrop-blur
+    text-sky-700 text-sm font-medium
+    border border-sky-200
+    ring-1 ring-sky-200/50
+    hover:ring-sky-400 hover:shadow-md
+    transition-all duration-300
+  "
                   >
                     {skill}
                   </span>
@@ -111,7 +116,7 @@ export default function Resume() {
               </h3>
 
               <ul className="space-y-4 text-gray-700">
-                <li>• Built responsive web apps with React & Tailwind</li>
+                <li>• Smart Farm Dashboard</li>
                 <li>• Developed IoT projects with ESP8266 / ESP32</li>
                 <li>• Integrated frontend with Firebase & APIs</li>
               </ul>
@@ -172,8 +177,8 @@ export default function Resume() {
                   📄 Resume Info
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Updated: December 2024</li>
-                  <li>• Format: PDF (2 pages)</li>
+                  <li>• Updated: January 2026</li>
+                  <li>• Format: PDF (1 pages)</li>
                   <li>• Size: 1.2 MB</li>
                 </ul>
               </div>
@@ -188,15 +193,14 @@ export default function Resume() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm
-              flex items-center justify-center p-4"
+              className=" fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start justify-center pt-24 px-4 pb-8"
               onClick={() => setOpen(false)}
             >
               <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
+                initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                className="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-2xl"
+                exit={{ scale: 0.95, opacity: 0 }}
+                className=" relative w-full max-w-5xl max-h-[calc(100vh-8rem)] overflow-y-auto rounded-2xl"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button

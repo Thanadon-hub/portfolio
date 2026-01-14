@@ -11,10 +11,10 @@ const projects = [
     icon: "🌱",
   },
   {
-    title: "People Counter System",
+    title: "ESP32 People Counter",
     description: "ESP32 & sensor-based people counting with live display.",
-    tech: ["ESP32", "IoT", "C++"],
-    link: "https://github.com/yourusername/people-counter",
+    tech: ["ESP32", "IoT", "C++", "Sensors","Firebase"],
+    link: "https://github.com/Thanadon-hub/my-project",
     icon: "👥",
   },
   {
