@@ -13,7 +13,7 @@ const projects = [
   {
     title: "ESP32 People Counter",
     description: "ESP32 & sensor-based people counting with live display.",
-    tech: ["ESP32", "IoT", "C++", "Sensors","Firebase"],
+    tech: ["ESP32", "IoT", "C++", "Sensors", "Firebase"],
     link: "https://github.com/Thanadon-hub/my-project",
     icon: "👥",
   },
@@ -29,24 +29,37 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="relative min-h-screen px-6 py-24
-      bg-gradient-to-br from-sky-50 via-white to-purple-50 overflow-hidden">
-
+    <section
+      className="
+        relative min-h-screen
+        px-6
+        pt-28 md:pt-24
+        pb-32 md:pb-24
+        bg-gradient-to-br from-sky-50 via-white to-purple-50
+        overflow-hidden
+      "
+    >
       {/* background blobs */}
       <motion.div
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-32 -left-32 w-[28rem] h-[28rem]
-        bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -top-32 -left-32
+          w-[22rem] h-[22rem] sm:w-[28rem] sm:h-[28rem]
+          bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       <motion.div
         animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem]
-        bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -bottom-32 -right-32
+          w-[24rem] h-[24rem] sm:w-[30rem] sm:h-[30rem]
+          bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       {/* title */}
@@ -54,22 +67,32 @@ export default function Projects() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative z-10 text-center mb-20"
+        className="relative z-10 text-center mb-14 sm:mb-20"
       >
         <h2
-          className="text-4xl md:text-5xl font-extrabold mb-3
-          bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500
-          bg-clip-text text-transparent"
+          className="
+            text-3xl sm:text-4xl md:text-5xl
+            font-extrabold mb-3
+            bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500
+            bg-clip-text text-transparent
+          "
         >
-          Projects<br /> & Works
+          Projects <br className="sm:hidden" /> & Works
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-sm sm:text-base">
           Selected works & personal projects
         </p>
       </motion.div>
 
       {/* grid */}
-      <div className="relative z-10 max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        className="
+          relative z-10
+          max-w-6xl mx-auto
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+          gap-6 sm:gap-10
+        "
+      >
         {projects.map((project, index) => (
           <motion.a
             key={index}
@@ -78,11 +101,14 @@ export default function Projects() {
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.15 }}
-            whileHover={{ y: -12 }}
+            transition={{ delay: index * 0.12 }}
+            whileHover={{ y: -10 }}
+            whileTap={{ scale: 0.97 }}
             className="
-              group backdrop-blur-xl bg-white/60
-              rounded-3xl p-8
+              group
+              backdrop-blur-xl bg-white/60
+              rounded-3xl
+              p-6 sm:p-8
               border border-white/40
               shadow-xl hover:shadow-2xl
               transition-all duration-300
@@ -91,10 +117,11 @@ export default function Projects() {
             {/* icon */}
             <div
               className="
-                w-16 h-16 mb-6 rounded-2xl
+                w-14 h-14 sm:w-16 sm:h-16
+                mb-6 rounded-2xl
                 bg-gradient-to-tr from-pink-200 to-sky-200
                 flex items-center justify-center
-                text-3xl
+                text-2xl sm:text-3xl
                 group-hover:from-pink-500 group-hover:to-sky-500
                 group-hover:scale-110
                 transition-all duration-300
@@ -106,7 +133,7 @@ export default function Projects() {
             </div>
 
             {/* title */}
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-2">
               {project.title}
             </h3>
 

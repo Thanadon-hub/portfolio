@@ -4,26 +4,36 @@ import { motion } from "framer-motion";
 export default function Contact() {
   return (
     <section
-      className="relative min-h-screen flex flex-col items-center justify-center
-      text-center px-6
-      bg-gradient-to-br from-sky-50 via-white to-purple-50
-      overflow-hidden"
+      className="
+        relative min-h-screen
+        flex flex-col items-center justify-start md:justify-center
+        pt-28 md:pt-0 pb-32 md:pb-0
+        text-center px-6
+        bg-gradient-to-br from-sky-50 via-white to-purple-50
+        overflow-hidden
+      "
     >
       {/* background blobs */}
       <motion.div
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-32 -left-32 w-[26rem] h-[26rem]
-        bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -top-32 -left-32
+          w-[22rem] h-[22rem] sm:w-[26rem] sm:h-[26rem]
+          bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       <motion.div
         animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-32 -right-32 w-[28rem] h-[28rem]
-        bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -bottom-32 -right-32
+          w-[24rem] h-[24rem] sm:w-[28rem] sm:h-[28rem]
+          bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       {/* title */}
@@ -31,10 +41,13 @@ export default function Contact() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative z-10 mb-4
-        text-4xl md:text-5xl font-extrabold
-        bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500
-        bg-clip-text text-transparent"
+        className="
+          relative z-10 mb-4
+          text-3xl sm:text-4xl md:text-5xl
+          font-extrabold
+          bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500
+          bg-clip-text text-transparent
+        "
       >
         Contact Me
       </motion.h2>
@@ -43,16 +56,25 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
-        className="relative z-10 mb-14 max-w-md
-        text-gray-600"
+        className="
+          relative z-10 mb-10 sm:mb-14
+          max-w-md
+          text-gray-600
+          text-sm sm:text-base
+        "
       >
         You can contact me through the channels below.
       </motion.p>
 
       {/* cards */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        {/* Card template */}
+      <div
+        className="
+          relative z-10
+          grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+          gap-6 sm:gap-8
+          w-full max-w-6xl
+        "
+      >
         {[
           {
             label: "Email",
@@ -90,26 +112,30 @@ export default function Contact() {
         ].map((item, i) => (
           <motion.a
             key={i}
-            whileHover={{ y: -10, scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ y: -8, scale: 1.04 }}
+            whileTap={{ scale: 0.96 }}
             href={item.href}
             target="_blank"
             rel="noopener noreferrer"
             className="
-              group backdrop-blur-xl bg-white/60
-              rounded-3xl px-10 py-8
+              group
+              backdrop-blur-xl bg-white/60
+              rounded-3xl
+              px-6 sm:px-8 md:px-10
+              py-6 sm:py-8
               border border-white/40
               shadow-xl hover:shadow-2xl
               transition-all duration-300
-              cursor-pointer
             "
           >
             <div
               className="
-                w-16 h-16 mx-auto mb-4 rounded-full
+                w-14 h-14 sm:w-16 sm:h-16
+                mx-auto mb-4
+                rounded-full
                 bg-gradient-to-tr from-pink-200 to-sky-200
                 flex items-center justify-center
-                text-3xl text-sky-700
+                text-2xl sm:text-3xl text-sky-700
                 group-hover:from-pink-500 group-hover:to-sky-500
                 group-hover:text-white
                 transition-all duration-300
@@ -121,7 +147,7 @@ export default function Contact() {
             <h3 className="font-semibold text-gray-800">
               {item.label}
             </h3>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-gray-600 mt-1 break-all">
               {item.value}
             </p>
           </motion.a>

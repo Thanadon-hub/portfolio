@@ -6,24 +6,36 @@ export default function Resume() {
 
   return (
     <section
-      className="relative min-h-screen py-24 px-6
-      bg-gradient-to-br from-sky-50 via-white to-purple-50 overflow-hidden"
+      className="
+        relative min-h-screen
+        px-6
+        pt-28 md:pt-24
+        pb-32 md:pb-24
+        bg-gradient-to-br from-sky-50 via-white to-purple-50
+        overflow-hidden
+      "
     >
       {/* background blobs */}
       <motion.div
         animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-32 -left-32 w-[28rem] h-[28rem]
-        bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -top-32 -left-32
+          w-[22rem] h-[22rem] sm:w-[28rem] sm:h-[28rem]
+          bg-gradient-to-tr from-pink-400 via-purple-400 to-sky-400
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       <motion.div
         animate={{ y: [0, 30, 0], x: [0, -20, 0] }}
         transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem]
-        bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
-        opacity-30 rounded-full blur-3xl"
+        className="
+          absolute -bottom-32 -right-32
+          w-[24rem] h-[24rem] sm:w-[30rem] sm:h-[30rem]
+          bg-gradient-to-tr from-sky-300 via-cyan-300 to-purple-300
+          opacity-30 rounded-full blur-3xl
+        "
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -32,33 +44,45 @@ export default function Resume() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16
-            text-4xl md:text-5xl font-extrabold
+          className="
+            text-center mb-12 sm:mb-16
+            text-3xl sm:text-4xl md:text-5xl
+            font-extrabold
             bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500
-            bg-clip-text text-transparent"
+            bg-clip-text text-transparent
+          "
         >
           Resume
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {/* LEFT: content */}
-          <div className="md:col-span-2 space-y-10">
+          <div className="md:col-span-2 space-y-8 sm:space-y-10">
             {/* Education */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="backdrop-blur-xl bg-white/60
-              rounded-3xl shadow-xl p-8 border border-white/40"
+              transition={{ delay: 0.2 }}
+              className="
+                backdrop-blur-xl bg-white/60
+                rounded-3xl
+                shadow-xl
+                p-6 sm:p-8
+                border border-white/40
+              "
             >
-              <h3 className="text-xl font-semibold text-sky-600 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-sky-600 mb-4">
                 🎓 Education
               </h3>
-              <p className="text-gray-700">
-                -Chumphon Technical College Computer Technology 2019-2021 <br />
-                -Chumphon Technical College Computer Hardware 2021-2023 <br />
-                -King mongkut's university of technology north bangkok <br />
-                Bachelor's Degree in Electronic computer technology 2024-Present
+              <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                Chumphon Technical College – Computer Technology (2019–2021)
+                <br />
+                Chumphon Technical College – Computer Hardware (2021–2023)
+                <br />
+                King Mongkut's University of Technology North Bangkok
+                <br />
+                Bachelor’s Degree in Electronic Computer Technology
+                (2024–Present)
               </p>
             </motion.div>
 
@@ -66,11 +90,16 @@ export default function Resume() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.45 }}
-              className="backdrop-blur-xl bg-white/60
-              rounded-3xl shadow-xl p-8 border border-white/40"
+              transition={{ delay: 0.35 }}
+              className="
+                backdrop-blur-xl bg-white/60
+                rounded-3xl
+                shadow-xl
+                p-6 sm:p-8
+                border border-white/40
+              "
             >
-              <h3 className="text-xl font-semibold text-sky-600 mb-6">
+              <h3 className="text-lg sm:text-xl font-semibold text-sky-600 mb-6">
                 💻 Skills
               </h3>
 
@@ -83,19 +112,18 @@ export default function Resume() {
                   "LAN / Wi-Fi Setup",
                   "Network Configuration (Basic)",
                   "Switch Configuration (Layer 2, Layer 3)",
-                  
                 ].map((skill) => (
                   <span
                     key={skill}
                     className="
-    px-4 py-2 rounded-full
-    bg-white/70 backdrop-blur
-    text-sky-700 text-sm font-medium
-    border border-sky-200
-    ring-1 ring-sky-200/50
-    hover:ring-sky-400 hover:shadow-md
-    transition-all duration-300
-  "
+                      px-4 py-2 rounded-full
+                      bg-white/70 backdrop-blur
+                      text-sky-700 text-xs sm:text-sm font-medium
+                      border border-sky-200
+                      ring-1 ring-sky-200/50
+                      hover:ring-sky-400 hover:shadow-md
+                      transition-all duration-300
+                    "
                   >
                     {skill}
                   </span>
@@ -107,18 +135,23 @@ export default function Resume() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="backdrop-blur-xl bg-white/60
-              rounded-3xl shadow-xl p-8 border border-white/40"
+              transition={{ delay: 0.5 }}
+              className="
+                backdrop-blur-xl bg-white/60
+                rounded-3xl
+                shadow-xl
+                p-6 sm:p-8
+                border border-white/40
+              "
             >
-              <h3 className="text-xl font-semibold text-sky-600 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-sky-600 mb-4">
                 🛠 Experience
               </h3>
 
-              <ul className="space-y-4 text-gray-700">
-                <li>• Smart Farm Dashboard</li>
-                <li>• Developed IoT projects with ESP8266 / ESP32</li>
-                <li>• Integrated frontend with Firebase & APIs</li>
+              <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
+                <li>• Smart Farm Dashboard (Flutter & Firebase)</li>
+                <li>• IoT projects with ESP8266 / ESP32</li>
+                <li>• Frontend integration with Firebase & APIs</li>
               </ul>
             </motion.div>
           </div>
@@ -134,20 +167,28 @@ export default function Resume() {
               {/* image */}
               <div
                 onClick={() => setOpen(true)}
-                className="cursor-zoom-in
-                backdrop-blur-xl bg-white/60
-                rounded-3xl shadow-xl p-4
-                border border-white/40
-                hover:shadow-2xl transition"
+                className="
+                  cursor-zoom-in
+                  backdrop-blur-xl bg-white/60
+                  rounded-3xl
+                  shadow-xl
+                  p-4
+                  border border-white/40
+                  hover:shadow-2xl
+                  transition
+                "
               >
                 <img
                   src="/Resume_in.jpg"
                   alt="Resume"
-                  className="rounded-2xl w-full
-                  hover:scale-105 transition-transform duration-300"
+                  className="
+                    rounded-2xl w-full
+                    hover:scale-105
+                    transition-transform duration-300
+                  "
                 />
                 <p className="text-center text-sm text-sky-500 mt-3">
-                  👆 Click to preview
+                  👆 Tap to preview
                 </p>
               </div>
 
@@ -156,7 +197,7 @@ export default function Resume() {
                 href="/Resume_thai.pdf"
                 download
                 whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.98 }}
+                whileTap={{ scale: 0.97 }}
                 className="
                   flex items-center justify-center gap-3
                   w-full py-4 rounded-xl font-semibold
@@ -170,15 +211,20 @@ export default function Resume() {
 
               {/* info */}
               <div
-                className="backdrop-blur-xl bg-white/60
-                rounded-3xl shadow-xl p-6 border border-white/40"
+                className="
+                  backdrop-blur-xl bg-white/60
+                  rounded-3xl
+                  shadow-xl
+                  p-6
+                  border border-white/40
+                "
               >
                 <h4 className="font-semibold text-sky-700 mb-3">
                   📄 Resume Info
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li>• Updated: January 2026</li>
-                  <li>• Format: PDF (1 pages)</li>
+                  <li>• Format: PDF (1 page)</li>
                   <li>• Size: 1.2 MB</li>
                 </ul>
               </div>
@@ -186,29 +232,42 @@ export default function Resume() {
           </motion.div>
         </div>
 
-        {/* modal */}
+        {/* modal preview */}
         <AnimatePresence>
           {open && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className=" fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-start justify-center pt-24 px-4 pb-8"
+              className="
+                fixed inset-0 z-50
+                bg-black/70 backdrop-blur-sm
+                flex items-start justify-center
+                pt-24 px-4 pb-8
+              "
               onClick={() => setOpen(false)}
             >
               <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
-                className=" relative w-full max-w-5xl max-h-[calc(100vh-8rem)] overflow-y-auto rounded-2xl"
+                className="
+                  relative w-full max-w-5xl
+                  max-h-[calc(100vh-8rem)]
+                  overflow-y-auto
+                  rounded-2xl
+                "
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setOpen(false)}
-                  className="absolute top-4 right-4
-                  w-10 h-10 rounded-full bg-white
-                  text-sky-600 shadow-lg
-                  hover:scale-110 transition"
+                  className="
+                    sticky top-4 ml-auto
+                    w-10 h-10
+                    rounded-full bg-white
+                    text-sky-600 shadow-lg
+                    hover:scale-110 transition
+                  "
                 >
                   ✕
                 </button>
