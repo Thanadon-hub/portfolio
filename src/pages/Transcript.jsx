@@ -121,7 +121,7 @@ export default function Transcript() {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="/student.pdf"
+            href="/Transcript.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="
