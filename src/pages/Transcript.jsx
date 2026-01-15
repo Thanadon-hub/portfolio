@@ -104,7 +104,7 @@ export default function Transcript() {
           "
         >
           <img
-            src="/github.jpg"
+            src="/Transcript.jpg"
             alt="Transcript Preview"
             className="w-full h-44 sm:h-56 object-cover"
             loading="lazy"
