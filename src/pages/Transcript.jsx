@@ -217,7 +217,7 @@ export default function Transcript() {
               </button>
 
               <img
-                src="/github.jpg"
+                src="/Transcript.jpg"
                 alt="Full Transcript"
                 className="
                   w-full h-auto
@@ -230,7 +230,7 @@ export default function Transcript() {
 
               <div className="mt-4 flex justify-center">
                 <a
-                  href="/student.pdf"
+                  href="/Transcript.pdf"
                   download
                   className="
                     px-6 py-2 rounded-full font-medium
