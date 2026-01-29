@@ -168,7 +168,7 @@ export default function Transcript() {
             </div>
             <div>
               <p className="font-semibold text-sky-700">GPA</p>
-              <p>3.50 / 4.00</p>
+              <p>2.86</p>
             </div>
           </div>
         </div>
